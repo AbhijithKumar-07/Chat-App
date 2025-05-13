@@ -5,11 +5,11 @@ import cors from "cors";
 
 import path from "path";
 
-import authRoutes from "../routes/auth.route.js";
-import messageRoutes from "../routes/message.route.js";
+import authRoutes from "./routes/auth.route.js";
+import messageRoutes from "./routes/message.route.js";
 
-import { connectDB } from "../lib/db.js";
-import { app, server } from "../lib/socket.js";
+import { connectDB } from "./lib/db.js";
+import { app, server } from "./lib/socket.js";
 
 dotenv.config();
 
@@ -40,4 +40,3 @@ server.listen(PORT, () => {
   console.log("Server is running on PORT:" + PORT);
   connectDB();
 });
-
