@@ -4,11 +4,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "npm install --prefix backend --force && npm install --prefix frontend && npm run build --prefix frontend",
+    "build": "rm -rf backend/node_modules backend/package-lock.json && npm install --prefix backend --force && npm install --prefix frontend && npm run build --prefix frontend",
     "start": "npm run start --prefix backend"
   },
   "engines": {
-    "node": "20"
+    "npm": "10.x",
+    "node": "20.x"
   },
   "keywords": [],
   "author": "",
