@@ -23,6 +23,10 @@ const App = () => {
     checkAuth();
   }, [checkAuth]);
 
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
+
   console.log({ authUser });
 
   if (isCheckingAuth && !authUser)
@@ -33,7 +37,7 @@ const App = () => {
     );
 
   return (
-    <div className="min-h-screen" data-theme={theme}>
+    <div className="min-h-screen bg-base-100 text-base-content">
       <Navbar />
 
       <Routes>
